@@ -1,0 +1,73 @@
+/* Solamente cuando la página tenga un máximo de 600px */
+@media only screen and (max-width: 600px){
+    
+    /* Aplicamos relative porque luego vamos a cambiar el navbar
+        de su posición por defecto */
+    .navbar{
+        position: relative;
+    }
+    .navbar .user{
+        /* display: none; */
+        position: absolute;
+        grid-column: 7/8;
+    }
+    /* Muestro el menú hamburguesa */
+    /* Y lo cambio a la columna 8 */
+    .navbar .menu-bar{
+        display: block;
+        grid-column: 8/9;
+        font-size: 2em;
+        cursor: pointer;
+        /*coloco el ícono por encima de todo*/
+        z-index: 99;
+    }
+
+    .navbar .menu{
+        /* El navbar no va a estar dentro del flujo normal */
+        position: absolute;
+        
+        /* toma todo el ancho del espacio que ocupa */
+        width: 100%;
+
+        /*Tomo el 70% de la altura de la ventana*/
+        height: 70vh;
+
+        display: grid;
+
+        align-items: center;
+
+        background-color: rgba(19, 17, 19, 1);
+
+        /* Coloco un margen para separar el menú del navbar */
+        margin-top: 25rem;
+
+        /* Movemos el menú en x a la derecha para 
+        ocultarlo y que haga un efecto de transición cuando presionamos
+        el menú hamburguesa*/
+        transform: translateX(170%);
+
+        /*Efecto de transición de un segundo*/
+        transition: all 1s;
+    }
+    /*menu-palanca va a ser activado por un script de JS*/
+    /*Va a desplegar el menú hasta que quede un 70% 
+        a la derecha con respecto al centro del viewport*/
+    .navbar .menu-palanca{
+        transform: translateX(60%);
+    }
+
+    .listaSecciones{
+        max-width: 100%;
+        color: azure;
+        background-color:black;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .contenedor_clas{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
