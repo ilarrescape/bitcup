@@ -1,0 +1,44 @@
+
+@media only screen and (max-width: 600px) {
+	.navbar {
+		position: relative;
+		.user {
+			position: absolute;
+			grid-column: 7/8;
+		}
+		.menu-bar {
+			display: block;
+			grid-column: 8/9;
+			font-size: 2em;
+			cursor: pointer;
+			z-index: 99;
+		}
+		.menu {
+			position: absolute;
+			width: 100%;
+			height: 70vh;
+			display: grid;
+			align-items: center;
+			background-color: rgba(19, 17, 19, 1);
+			margin-top: 25rem;
+			transform: translateX(170%);
+			transition: all 1s;
+		}
+		.menu-palanca {
+			transform: translateX(60%);
+		}
+	}
+	.listaSecciones {
+		max-width: 100%;
+		color: azure;
+		background-color: black;
+		display: grid;
+		grid-template-columns: repeat(1,1fr);
+		text-align: center;
+		padding-top: 20px;
+	}
+	.contenedor_clas {
+		display: grid;
+		grid-template-columns: repeat(1,1fr);
+	}
+}
